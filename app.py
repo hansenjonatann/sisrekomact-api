@@ -3,8 +3,13 @@ import numpy as np
 from flask import Flask , request , jsonify
 import joblib
 import mysql.connector
+from flask_cors import CORS 
+
+
 
 app = Flask(__name__)
+
+CORS(app)
 
 # config MySQL
 db_config = {
@@ -22,16 +27,30 @@ def get_db_connection():
     conn = mysql.connector.connect(**db_config)
     return conn
 
+def get_mahasiswa_by_nim():
+    try: 
+        data = request.json 
+        npm = data.get('npm_mahasiswa')
+
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        query = "SELECT * FROM mahasiswa WHERE npm_mahasiswa = %s"
+        cursor.execute(query, (npm,))
+        result = cursor.fetchone
+        
+        return next((mhs for mhs in result if mhs["npm_mahasiswa"] == npm), None)
+    finally: 
+        return jsonify({'Mahasiswa not found'})
+
 
 @app.route('/')
 def Home():
     return {"status" : "true" , "message" : "Berhasil menjalankan server"}
 
-@app.route('/kegiatanmahasiswa' , methods=['POST'])
-def get_kegiatan():
+@app.route('/kegiatanmahasiswa/<npm_mahasiswa>' , methods=['GET'])
+def get_kegiatan(npm_mahasiswa):
     try: 
-        data = request.json 
-        npm_mahasiswa = data.get('npm_mahasiswa')
+       
 
         if not npm_mahasiswa:
             return jsonify({'error': 'npm_mahasiswa is required'}), 400
@@ -55,14 +74,10 @@ def get_kegiatan():
 
 
 
-
-
-@app.route('/recomend', methods=['POST'])
-def recomend():
+@app.route('/recomend/<npm_mahasiswa>', methods=['GET'])
+def recomend(npm_mahasiswa):
     try:
-        data = request.json
-        npm_mahasiswa = data.get('npm_mahasiswa')
-
+        # Validasi jika npm_mahasiswa tidak kosong
         if not npm_mahasiswa:
             return jsonify({'error': "npm_mahasiswa is required"}), 400
 
@@ -112,11 +127,11 @@ def recomend():
 
         # Logika rekomendasi berdasarkan cluster
         if cluster == 0:
-            query_kegiatan = "SELECT * FROM dataset_kegiatanmahasiswa WHERE kategori = 'DKV' LIMIT 10"
+            query_kegiatan = "SELECT DISTINCT  * FROM dataset_kegiatanmahasiswa WHERE kategori = 'DKV' ORDER BY RAND() LIMIT 12"
         elif cluster == 1:
-            query_kegiatan = "SELECT * FROM dataset_kegiatanmahasiswa WHERE kategori = 'Umum' LIMIT 10"
+            query_kegiatan = "SELECT DISTINCT  * FROM dataset_kegiatanmahasiswa WHERE kategori = 'Umum' ORDER BY RAND() LIMIT 12"
         elif cluster == 2:
-            query_kegiatan = "SELECT * FROM dataset_kegiatanmahasiswa WHERE kategori = 'PSI' LIMIT 10"
+            query_kegiatan = "SELECT DISTINCT  * FROM dataset_kegiatanmahasiswa WHERE kategori = 'PSI' ORDER BY RAND() LIMIT 12"
         else:
             return jsonify({'error': 'Cluster not recognized'}), 400
 
@@ -127,6 +142,7 @@ def recomend():
         # Jika tidak ada kegiatan yang sesuai
         if not kegiatan:
             return jsonify({'message': 'No recommended activities found'}), 200
+
 
         # Kembalikan hasil rekomendasi berdasarkan cluster yang baru
         return jsonify({'cluster': int(cluster[0]), 'rekomendasi_kegiatan': kegiatan}), 200
@@ -140,7 +156,6 @@ def recomend():
             cursor.close()
         if 'connection' in locals():
             connection.close()
-
 
 
 
@@ -186,6 +201,66 @@ def predict():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/login' , methods=['POST'])
+def login():
+        data = request.json 
+
+        npm_mahasiswa = data.get('npm_mahasiswa')
+        password = data.get('password')
+
+        if not npm_mahasiswa or not password:
+             return jsonify({"message": "NIM and password are required"}), 400
+        
+        mahasiswa = get_mahasiswa_by_nim()
+    
+        if mahasiswa is None:
+            return jsonify({"message": "Mahasiswa not found"}), 404
+    
+    # Memeriksa apakah password yang dimasukkan sama dengan NIM
+        if mahasiswa['nim'] == password:
+            return jsonify({"message": "Login successful", "nama": mahasiswa['nama']}), 200
+        else:
+            return jsonify({"message": "Invalid password"}), 401
+
+
+@app.route('/detail/<npm_mahasiswa>', methods=['GET'])
+def detail(npm_mahasiswa):
+    try:
+        # Validasi jika npm_mahasiswa tidak kosong
+        if not npm_mahasiswa:
+            return jsonify({'error': "npm_mahasiswa is required"}), 400
+
+        # Dapatkan koneksi ke database
+        connection = get_db_connection()
+        cursor = connection.cursor(dictionary=True)
+
+        # Ambil data mahasiswa untuk clustering dari database (termasuk nilai-nilai yang dibutuhkan)
+        query_mahasiswa = '''
+            SELECT 
+               *
+            FROM dataset_mahasiswa WHERE npm_mahasiswa = %s
+        '''
+        cursor.execute(query_mahasiswa, (npm_mahasiswa,))
+        mahasiswa = cursor.fetchone()
+
+        # Jika tidak ada kegiatan yang sesuai
+        if not mahasiswa:
+            return jsonify({'message': 'No mahasiswa found'}), 200
+
+
+        # Kembalikan hasil rekomendasi berdasarkan cluster yang baru
+        return jsonify({"data" : mahasiswa}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+    finally:
+        # Tutup sumber daya
+        if 'cursor' in locals():
+            cursor.close()
+        if 'connection' in locals():
+            connection.close()
 
 
 if __name__ == '__main__':
