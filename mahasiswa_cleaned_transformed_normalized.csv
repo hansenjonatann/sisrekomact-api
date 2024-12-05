@@ -1,0 +1,674 @@
+id,npm_mahasiswa,nama_mahasiswa,prodi_mahasiswa,angkatan_mahasiswa,ipk_mahasiswa,status_mahasiswa,pembimbing_tugas_akhir
+1,1931173,Celine Te,Sistem Informasi,2019,0.9675,Lulus,5120028.0
+2,1931001,Rido Renando,Sistem Informasi,2019,0.93,Lulus,1170002.0
+3,1931009,Richie Marlon,Sistem Informasi,2019,0.975,Lulus,5120028.0
+4,1931083,Elvin Whang,Sistem Informasi,2019,0.92,Lulus,6200076.0
+5,2031001,Robin Sunjaya,Sistem Informasi,2020,0.97,Aktif,9180074.0
+6,2031002,Jerry,Sistem Informasi,2020,0.975,Aktif,9180074.0
+7,2031003,Wesley Zhang,Sistem Informasi,2020,0.97,Aktif,9150065.0
+8,1931037,Novianto,Sistem Informasi,2019,0.9725,Lulus,7190034.0
+9,1931047,Welson,Sistem Informasi,2019,0.96,Lulus,5120028.0
+10,1931055,Joelyn Octavia,Sistem Informasi,2019,0.8875,Lulus,7190034.0
+11,1931117,Kristianti,Sistem Informasi,2019,0.9125,Lulus,8040139.0
+12,1931185,Heriyanto,Sistem Informasi,2019,0.925,Aktif,0.0
+13,1931064,Hendiko,Sistem Informasi,2019,0.9475,Aktif,0.0
+14,1931102,Kelvin,Sistem Informasi,2019,0.9775,Lulus,9200093.0
+15,1931177,Christian,Sistem Informasi,2019,0.92,Lulus,9200093.0
+16,1931151,Yanto,Sistem Informasi,2019,0.8475,Lulus,6180042.0
+17,1931084,Riko Ananda Putra,Sistem Informasi,2019,0.8325,Aktif,0.0
+18,1931172,Frenda Ang,Sistem Informasi,2019,0.8925,Lulus,6180042.0
+19,1931126,Hengki,Sistem Informasi,2019,0.91,Lulus,2200046.0
+20,1931132,Olwin,Sistem Informasi,2019,0.92,Lulus,6180042.0
+21,2031005,Jackson,Sistem Informasi,2020,1.0,Aktif,6200076.0
+22,2031006,Handra Dermawan,Sistem Informasi,2020,0.935,Aktif,6200076.0
+23,2031007,Jecelyn,Sistem Informasi,2020,0.9625,Aktif,9200093.0
+24,2031008,Tasya Chandra,Sistem Informasi,2020,1.0,Aktif,5120028.0
+25,2031009,Helen,Sistem Informasi,2020,1.0,Aktif,5120028.0
+26,2031044,Andi,Sistem Informasi,2020,0.9525,Aktif,5120028.0
+27,2031046,Vincent Ng,Sistem Informasi,2020,0.8,Aktif,0.0
+28,2031047,Novendi,Sistem Informasi,2020,0.9125,Aktif,7190035.0
+29,2031049,Catherine,Sistem Informasi,2020,0.82,Aktif,0.0
+30,2031050,Dennis Fernando,Sistem Informasi,2020,0.8225,Aktif,0.0
+31,2031175,Rio Fernando,Sistem Informasi,2020,0.84,Aktif,3150017.0
+32,2031051,Gabrielle Andrea Castillinov Runtu,Sistem Informasi,2020,0.91,Aktif,3150017.0
+33,2031053,David Vieri,Sistem Informasi,2020,0.825,Aktif,0.0
+34,2031055,Edmund,Sistem Informasi,2020,0.9025,Keluar,Unknown
+35,1931160,Mikhael Chendra,Sistem Informasi,2019,0.9525,Lulus,7190035.0
+36,1931073,Ferdinand William Ng,Sistem Informasi,2019,0.895,Lulus,9180087.0
+37,1931007,Roma Sabet Manurung,Sistem Informasi,2019,0.8875,Lulus,8040139.0
+38,1931091,Steven Patrick Santoso,Sistem Informasi,2019,0.87,Aktif,0.0
+39,1931034,Jimmy Prawira Samudra,Sistem Informasi,2019,0.9575,Lulus,1220002.0
+40,1931038,Hendrawan,Sistem Informasi,2019,0.92,Lulus,7190034.0
+41,1931023,Raka Prasetya,Sistem Informasi,2019,0.79,Aktif,0.0
+42,1931087,Muhammad Sulton Maulana,Sistem Informasi,2019,0.8525,Lulus,7190035.0
+43,1931121,Indo Dicaprio Pratama,Sistem Informasi,2019,0.9725,Lulus,7190034.0
+44,1931188,Michelle Febri Soegianto,Sistem Informasi,2019,0.8725,Lulus,5120028.0
+45,1931040,Giovanno Estevan,Sistem Informasi,2019,0.935,Lulus,5120028.0
+46,1931158,Jason Hirawan,Sistem Informasi,2019,0.9525,Lulus,9150065.0
+47,1931031,Ricky Hartanto,Sistem Informasi,2019,0.9,Lulus,7190035.0
+48,1931008,Hengky,Sistem Informasi,2019,0.9775,Lulus,6180042.0
+49,1931152,Tony Dwi Aryo Kurniawan,Sistem Informasi,2019,0.89,Lulus,2200046.0
+50,1931080,Herdina,Sistem Informasi,2019,0.9025,Drop-out (putus studi),Unknown
+51,1931018,Kelviyanto Limanda,Sistem Informasi,2019,0.915,Lulus,11200122.0
+52,1931124,Wahyu Yudianto,Sistem Informasi,2019,0.8725,Lulus,11200122.0
+53,1931125,Donny,Sistem Informasi,2019,0.9875,Lulus,5120028.0
+54,1931165,Dayton,Sistem Informasi,2019,0.9925,Lulus,3150017.0
+55,1931063,Andry Ramadhansyah,Sistem Informasi,2019,0.9,Lulus,7190034.0
+56,1931053,Calvin Phodickson,Sistem Informasi,2019,0.92,Lulus,5120028.0
+57,1931016,Alifadilah Akbar Santosa,Sistem Informasi,2019,0.865,Aktif,0.0
+58,1931079,Infrisanti Wilson Tong,Sistem Informasi,2019,0.9575,Lulus,7190034.0
+59,1931128,Rayden Vebrianto,Sistem Informasi,2019,0.935,Lulus,7190034.0
+60,1931143,Alvi Geovanny,Sistem Informasi,2019,0.9675,Lulus,7180066.0
+61,1931149,Tio Satria Wijaya,Sistem Informasi,2019,0.905,Drop-out (putus studi),Unknown
+62,1931086,Hery Yohan,Sistem Informasi,2019,0.86,Lulus,9150065.0
+63,1931020,Christopher Harsana Jasa,Sistem Informasi,2019,0.875,Lulus,2200046.0
+64,1931077,Jihadhatul Akbar,Sistem Informasi,2019,0.89,Lulus,9180074.0
+65,1931059,Angel Putri Claudia Kustini,Sistem Informasi,2019,0.8225,Aktif,0.0
+66,1931072,Willy Fernando,Sistem Informasi,2019,0.95,Lulus,9180074.0
+67,1931146,Ilham Noer Dwi Lony,Sistem Informasi,2019,0.8825,Lulus,9200093.0
+68,1931045,Christopher Khomali,Sistem Informasi,2019,0.9525,Lulus,9200093.0
+69,1931108,Nelson,Sistem Informasi,2019,0.955,Lulus,9150065.0
+70,1931122,Putri Utami,Sistem Informasi,2019,0.8875,Lulus,9150065.0
+71,1931191,Aldi Irawan,Sistem Informasi,2019,0.8975,Drop-out (putus studi),Unknown
+72,1931056,Muhammad Sulthon Fahmi,Sistem Informasi,2019,0.84,Lulus,Unknown
+73,1931088,Ricky Andi Kurniawan,Sistem Informasi,2019,0.965,Lulus,2200046.0
+74,1931192,Madani Umpu Nikan,Sistem Informasi,2019,0.8575,Lulus,11200122.0
+75,1931032,Alberto Ilham Sutrisno,Sistem Informasi,2019,0.8,Aktif,0.0
+76,1931026,Hafiz Hamidi,Sistem Informasi,2019,0.8225,Lulus,5170046.0
+77,1931120,Edo Lee,Sistem Informasi,2019,0.8825,Lulus,1170002.0
+78,1931183,Egan Anthony,Sistem Informasi,2019,0.8825,Lulus,6200076.0
+79,1931029,Muhammad Rizqiansyah Haqiqi Ali,Sistem Informasi,2019,0.8675,Lulus,5170046.0
+80,1931044,Dandhytya Andrea Puspa,Sistem Informasi,2019,0.945,Lulus,6200076.0
+81,1931159,Yehezkiel Putra Galang,Sistem Informasi,2019,0.925,Lulus,9180074.0
+82,1931180,Simon Cornelius Simanjuntak,Sistem Informasi,2019,0.8625,Lulus,11200122.0
+83,1931182,Arief Fernando,Sistem Informasi,2019,0.9525,Lulus,8040139.0
+84,1931190,Muhammad Yusuf Zhafran,Sistem Informasi,2019,0.8325,Aktif,0.0
+85,1931195,Rio Nando,Sistem Informasi,2019,0.8725,Lulus,11200122.0
+86,1931139,Novita Chris,Sistem Informasi,2019,0.985,Lulus,1170002.0
+87,1931054,Jevin Tan,Sistem Informasi,2019,0.955,Lulus,11200122.0
+88,1931095,Djayadhinata,Sistem Informasi,2019,0.96,Lulus,9150065.0
+89,1931140,Andreas,Sistem Informasi,2019,0.9575,Lulus,1170002.0
+90,1931098,Vincent Octarian Vianto,Sistem Informasi,2019,0.97,Lulus,7190035.0
+91,1931066,Tomy,Sistem Informasi,2019,0.9525,Lulus,7190034.0
+92,1931006,Juliantio,Sistem Informasi,2019,0.9525,Lulus,7190034.0
+93,1931019,Tri Susanti,Sistem Informasi,2019,0.9875,Lulus,7190035.0
+94,1931131,Nursudiono,Sistem Informasi,2019,0.9625,Lulus,2200046.0
+95,1931074,Joyce Chrissy,Sistem Informasi,2019,0.9625,Lulus,7190034.0
+96,1931036,Yu Lun,Sistem Informasi,2019,0.965,Aktif,3150017.0
+97,1931003,Edwin Charley,Sistem Informasi,2019,0.97,Lulus,3150017.0
+98,1931127,Andriyanto,Sistem Informasi,2019,0.9375,Lulus,1170002.0
+99,1931136,Felix Fernando,Sistem Informasi,2019,0.8925,Aktif,0.0
+100,1931076,Harun Nata Wijaya,Sistem Informasi,2019,0.94,Keluar,Unknown
+101,1931099,Steven,Sistem Informasi,2019,0.97,Lulus,1170002.0
+102,1931163,Frederick,Sistem Informasi,2019,0.97,Lulus,7180066.0
+103,1931144,Steven Salim,Sistem Informasi,2019,0.995,Lulus,1170002.0
+104,1931062,Calvin Yantson,Sistem Informasi,2019,0.94,Aktif,0.0
+105,1931175,Kendy Junianto,Sistem Informasi,2019,0.98,Lulus,7190034.0
+106,1931021,Welliam Ali,Sistem Informasi,2019,0.9425,Lulus,3150017.0
+107,1931107,Chayen Remington Huan,Sistem Informasi,2019,0.9625,Lulus,11200122.0
+108,1931050,Vincent,Sistem Informasi,2019,0.98,Lulus,9180074.0
+109,1931052,Steven,Sistem Informasi,2019,0.9475,Lulus,1170002.0
+110,1931013,Kevin Anderson,Sistem Informasi,2019,0.93,Lulus,2200046.0
+111,1931010,Kelvyn,Sistem Informasi,2019,0.97,Lulus,3150017.0
+112,1931118,Jecky Fransisco,Sistem Informasi,2019,0.965,Lulus,9150065.0
+113,1931027,Cindy,Sistem Informasi,2019,0.9225,Lulus,6200076.0
+114,1931090,Jason Aaron Yang,Sistem Informasi,2019,0.975,Lulus,3150017.0
+115,1931161,Rifki,Sistem Informasi,2019,0.925,Lulus,3070027.0
+116,1931113,Agnes Jocelyn,Sistem Informasi,2019,0.9575,Lulus,2200046.0
+117,1931150,Kisusyenni Venessa,Sistem Informasi,2019,0.9975,Lulus,2200046.0
+118,1931033,Victory Jeanette Budhi Rahardjo,Sistem Informasi,2019,0.84,Keluar,Unknown
+119,1931028,Willy Antonio,Sistem Informasi,2019,0.8925,Lulus,5170046.0
+120,1931005,Jhon Indexon,Sistem Informasi,2019,0.935,Aktif,3070027.0
+121,1931024,Gianti,Sistem Informasi,2019,0.86,Drop-out (putus studi),Unknown
+122,1931051,Afandi,Sistem Informasi,2019,0.96,Lulus,8040139.0
+123,1931014,Harley Fernando,Sistem Informasi,2019,0.9575,Lulus,5120028.0
+124,1931002,Arif Budiman,Sistem Informasi,2019,0.9575,Lulus,9150065.0
+125,1931097,David Pramono,Sistem Informasi,2019,0.93,Lulus,9180074.0
+126,1931067,Sherley,Sistem Informasi,2019,0.985,Lulus,1170002.0
+127,1931017,Tofent,Sistem Informasi,2019,0.9475,Lulus,9150065.0
+128,1931039,Jose Manuel Budiman,Sistem Informasi,2019,0.985,Lulus,1170002.0
+129,1931135,Violen Anjeli Anggraini,Sistem Informasi,2019,0.9625,Lulus,8040139.0
+130,1931085,Juven Gautama,Sistem Informasi,2019,0.975,Lulus,8040139.0
+131,1931170,Silvina,Sistem Informasi,2019,0.975,Lulus,2200046.0
+132,1931162,Robin,Sistem Informasi,2019,0.9375,Lulus,9180074.0
+133,1931101,Jevon Junanto,Sistem Informasi,2019,0.9625,Lulus,9150065.0
+134,1931092,Kelvin Oh,Sistem Informasi,2019,0.8325,Aktif,0.0
+135,1931025,Amalia Putri Yulandi,Sistem Informasi,2019,0.9575,Lulus,8040139.0
+136,1931106,Kevin Antonio,Sistem Informasi,2019,0.95,Lulus,7190034.0
+137,1931114,Brohns Jaffrey,Sistem Informasi,2019,0.905,Lulus,6180042.0
+138,1931189,Erick Hernando,Sistem Informasi,2019,0.895,Lulus,5170078.0
+139,1931078,Kenneth Aaron,Sistem Informasi,2019,0.88,Aktif,0.0
+140,1931030,Dyon Andrean,Sistem Informasi,2019,0.93,Lulus,11200122.0
+141,1931089,Eka Sucipto,Sistem Informasi,2019,0.885,Lulus,9200093.0
+142,1931129,Suryanto,Sistem Informasi,2019,0.9425,Lulus,5120028.0
+143,1931157,Chris,Sistem Informasi,2019,0.945,Lulus,6200076.0
+144,1931048,Shanata Limanto,Sistem Informasi,2019,0.9525,Lulus,3150017.0
+145,1931100,Nicky Adi Putra,Sistem Informasi,2019,0.925,Lulus,6180042.0
+146,1931094,Nico Dwi Putra,Sistem Informasi,2019,0.9175,Lulus,6180042.0
+147,1931058,Melissa Valentino Rosiana,Sistem Informasi,2019,0.9125,Aktif,0.0
+148,1931060,Julyan Adi Saputra,Sistem Informasi,2019,0.9425,Lulus,3150017.0
+149,1931104,Steven,Sistem Informasi,2019,0.9375,Lulus,2200046.0
+150,1931012,Elbert Sun,Sistem Informasi,2019,0.975,Lulus,3070027.0
+151,1931154,Julia Veronica,Sistem Informasi,2019,0.9575,Lulus,1170002.0
+152,1931134,Shella,Sistem Informasi,2019,0.96,Lulus,7180066.0
+153,1931105,Nelson Donglas,Sistem Informasi,2019,0.9625,Lulus,1170002.0
+154,1931145,Aloysius Edward Marselino Dolok Saribu,Sistem Informasi,2019,0.9325,Lulus,1170002.0
+155,1931082,Henly,Sistem Informasi,2019,0.9725,Lulus,9150065.0
+156,1931093,Mettatama Gandha Puspita,Sistem Informasi,2019,0.925,Lulus,2200046.0
+157,1931166,Audrey Saudjhana,Sistem Informasi,2019,1.0,Lulus,7180066.0
+158,1931153,Katherine Oktaviani Yap Rui Qi,Sistem Informasi,2019,0.995,Lulus,6180042.0
+159,1931167,Aldi Rinalta,Sistem Informasi,2019,0.875,Aktif,3070027.0
+160,1931141,Hendra Wijaya,Sistem Informasi,2019,0.9225,Lulus,5120028.0
+161,1931109,Satria Lim,Sistem Informasi,2019,0.935,Lulus,11200122.0
+162,1931112,Michael Angelo,Sistem Informasi,2019,0.9425,Lulus,7190034.0
+163,1931148,M. Ramanda Alim,Sistem Informasi,2019,0.8575,Drop-out (putus studi),Unknown
+164,1931111,Veren,Sistem Informasi,2019,0.98,Lulus,11200122.0
+165,2031056,Antoni Halim,Sistem Informasi,2020,0.9175,Aktif,9180087.0
+166,2031057,Vionna,Sistem Informasi,2020,0.855,Keluar,Unknown
+167,2031058,Novita Putri,Sistem Informasi,2020,0.9675,Aktif,3150017.0
+168,2031059,Sakilah Dwi Cahyani,Sistem Informasi,2020,0.925,Aktif,1170002.0
+169,2031060,Vicco Leonardo,Sistem Informasi,2020,0.93,Aktif,6200076.0
+170,2031061,Veronika,Sistem Informasi,2020,0.8375,Keluar,Unknown
+171,2031062,Reinaldi Arsani Runtu,Sistem Informasi,2020,0.8,Aktif,0.0
+172,2031063,Annisya Putri Nadhia,Sistem Informasi,2020,0.9525,Aktif,8040139.0
+173,2031064,Victor Franky,Sistem Informasi,2020,0.97,Aktif,3070027.0
+174,2031065,Muhammad Baharudin,Sistem Informasi,2020,0.9425,Aktif,5170078.0
+175,2031066,Wiyandi,Sistem Informasi,2020,0.9575,Aktif,9180074.0
+176,2031067,Franky,Sistem Informasi,2020,0.9375,Aktif,7180066.0
+177,2031173,Nicholas,Sistem Informasi,2020,0.9125,Aktif,1220002.0
+178,2031097,Mario Ferdinandes,Sistem Informasi,2020,0.805,Aktif,1220002.0
+179,2031069,Kelvin Lau,Sistem Informasi,2020,0.94,Aktif,11200122.0
+180,2031070,Riswanto,Sistem Informasi,2020,0.95,Aktif,9180074.0
+181,2031071,Stanley Christianus,Sistem Informasi,2020,0.95,Aktif,9180087.0
+182,2031072,Edi Yanto,Sistem Informasi,2020,0.955,Aktif,6180042.0
+183,2031073,Asep Suryana,Sistem Informasi,2020,0.9225,Aktif,5170078.0
+184,2031074,Muhammad Ilham,Sistem Informasi,2020,0.91,Aktif,7180066.0
+185,2031075,Patrick Budiono,Sistem Informasi,2020,0.875,Aktif,0.0
+186,2031076,Bryan Tandian,Sistem Informasi,2020,0.97,Aktif,1220002.0
+187,2031077,Attlantha Valencia Simbar,Sistem Informasi,2020,0.865,Aktif,0.0
+188,2031078,Jeffrey Rustandi,Sistem Informasi,2020,0.9625,Aktif,0.0
+189,2031079,Fendy,Sistem Informasi,2020,0.9525,Aktif,9180087.0
+190,2031080,Sukma Risfa Sam Bima Yudha,Sistem Informasi,2020,0.975,Aktif,0.0
+191,2031081,Vivien Christy Apriyanti,Sistem Informasi,2020,0.99,Aktif,1170002.0
+192,2031082,Fadil Mahendra,Sistem Informasi,2020,0.87,Aktif,0.0
+193,2031083,Didi Santoso,Sistem Informasi,2020,0.8925,Aktif,6200076.0
+194,2031084,Vennes Owen,Sistem Informasi,2020,0.9375,Aktif,3070027.0
+195,2031176,Aldi Rifaldi Saputra,Sistem Informasi,2020,0.9525,Keluar,Unknown
+196,2031085,Mohamad Hasan Asari,Sistem Informasi,2020,0.92,Drop-out (putus studi),Unknown
+197,2031086,Kelvin Ramadhani Tambunan,Sistem Informasi,2020,0.9325,Keluar,0.0
+198,2031087,Nicholas Jeonanto,Sistem Informasi,2020,0.9475,Aktif,6180042.0
+199,2031179,Quen Anatasya,Sistem Informasi,2020,0.9025,Aktif,0.0
+200,2031180,Jenary Randa Liling,Sistem Informasi,2020,0.9475,Aktif,3150017.0
+201,2031181,Felix King Lie,Sistem Informasi,2020,0.9575,Aktif,8040139.0
+202,2031182,Said Teguh Putra Ramadhan,Sistem Informasi,2020,0.935,Aktif,1220002.0
+203,2031183,Syifa Nur Islami,Sistem Informasi,2020,0.945,Aktif,9200093.0
+204,2031184,Daniel Prisman,Sistem Informasi,2020,0.9025,Aktif,0.0
+205,2031088,Chris Pontonio,Sistem Informasi,2020,0.9025,Aktif,9200093.0
+206,2031089,Agus Yanto,Sistem Informasi,2020,0.97,Aktif,6180042.0
+207,2031090,Leonardy,Sistem Informasi,2020,0.9275,Aktif,3150017.0
+208,2031091,Jefri Hartono,Sistem Informasi,2020,1.0,Keluar,Unknown
+209,2031092,Rainal Agus Setiawan,Sistem Informasi,2020,0.985,Aktif,7190034.0
+210,2031093,Kelvin,Sistem Informasi,2020,0.96,Aktif,7190035.0
+211,2031094,Christine Gabriella,Sistem Informasi,2020,0.9675,Aktif,1220002.0
+212,2031095,Andre Jonathan Harahap,Sistem Informasi,2020,0.9775,Aktif,7190034.0
+213,2031096,Viona Angelina Herwanto,Sistem Informasi,2020,0.925,Aktif,0.0
+214,2031098,Chris Tan,Sistem Informasi,2020,0.98,Aktif,6180042.0
+215,2031100,Calvin,Sistem Informasi,2020,0.94,Aktif,5170078.0
+216,2031101,Steven Marlin,Sistem Informasi,2020,0.9775,Aktif,1220002.0
+217,2031102,Jerry,Sistem Informasi,2020,0.9575,Aktif,6180042.0
+218,2031103,El Vin Ho,Sistem Informasi,2020,0.97,Aktif,1170002.0
+219,2031104,Freddy Santoso,Sistem Informasi,2020,0.9575,Aktif,3070027.0
+220,2031105,Reddyson,Sistem Informasi,2020,0.945,Aktif,11200122.0
+221,2031107,Viona,Sistem Informasi,2020,0.975,Aktif,7190034.0
+222,2031108,Christine,Sistem Informasi,2020,0.9725,Aktif,5120028.0
+223,2031109,Dimas Firmansyah Nasution,Sistem Informasi,2020,0.9425,Aktif,8040139.0
+224,2031110,Anly Suryadana,Sistem Informasi,2020,0.99,Aktif,5120028.0
+225,2031112,Nicki Carter,Sistem Informasi,2020,0.83,Aktif,0.0
+226,2031113,Putra Ramadhan,Sistem Informasi,2020,0.905,Aktif,9180087.0
+227,2031114,Jo Sua,Sistem Informasi,2020,0.8775,Aktif,3070027.0
+228,2031115,Riandi Jastin Chong,Sistem Informasi,2020,0.78,Aktif,0.0
+229,2031116,Felix Sastro Lino,Sistem Informasi,2020,0.98,Aktif,11200122.0
+230,2031117,Lenda,Sistem Informasi,2020,0.98,Aktif,5170078.0
+231,2031118,Gary Phua,Sistem Informasi,2020,0.955,Aktif,11200122.0
+232,2031119,Henry,Sistem Informasi,2020,0.985,Aktif,6200076.0
+233,2031120,Putra Agung Winata,Sistem Informasi,2020,0.94,Aktif,6180042.0
+234,2031121,Wilsen Chanrico,Sistem Informasi,2020,0.9425,Aktif,9180074.0
+235,2031010,Eric,Sistem Informasi,2020,0.9775,Aktif,6180042.0
+236,2031011,Jesica,Sistem Informasi,2020,0.9675,Aktif,9150065.0
+237,2031012,Jessy,Sistem Informasi,2020,0.98,Aktif,6200076.0
+238,2031013,Jocelyn,Sistem Informasi,2020,0.9775,Aktif,8040139.0
+239,2031014,Leo Francisco,Sistem Informasi,2020,0.8775,Aktif,0.0
+240,2031015,Olive Beckam,Sistem Informasi,2020,0.9525,Drop-out (putus studi),Unknown
+241,2031016,Jonathan,Sistem Informasi,2020,1.0,Aktif,8040139.0
+242,2031017,Hertianto,Sistem Informasi,2020,0.9675,Aktif,9180074.0
+243,2031018,Charles William,Sistem Informasi,2020,0.9025,Aktif,9180087.0
+244,2031019,Stephanie,Sistem Informasi,2020,0.9775,Aktif,7190034.0
+245,2031020,Erlina,Sistem Informasi,2020,0.99,Aktif,5120028.0
+246,2031021,Julyanto,Sistem Informasi,2020,0.94,Aktif,5170046.0
+247,2031022,Bambam Julianto,Sistem Informasi,2020,0.845,Aktif,9180074.0
+248,2031023,Wenseslaus Harley Hardiwinata,Sistem Informasi,2020,0.9575,Aktif,1170002.0
+249,2031024,Angeline,Sistem Informasi,2020,0.98,Aktif,9150065.0
+250,2031025,Frendy,Sistem Informasi,2020,0.8975,Aktif,3070027.0
+251,2031026,Vanness Lee,Sistem Informasi,2020,0.865,Aktif,9180087.0
+252,2031027,Eric Sanjaya,Sistem Informasi,2020,0.9125,Aktif,11200122.0
+253,2031028,Erwin,Sistem Informasi,2020,0.8825,Aktif,0.0
+254,2031029,Brenky Jie,Sistem Informasi,2020,0.96,Aktif,7190034.0
+255,2031030,Steven Justino,Sistem Informasi,2020,0.8675,Meninggal Dunia,Unknown
+256,2031031,Intan Putri Perdana Sari,Sistem Informasi,2020,0.865,Aktif,5170078.0
+257,2031032,Vladimir Lim,Sistem Informasi,2020,0.965,Aktif,1220002.0
+258,2031033,Vendryan,Sistem Informasi,2020,0.985,Aktif,8040139.0
+259,2031034,Eric,Sistem Informasi,2020,0.9725,Aktif,9150065.0
+260,2031035,Fredy,Sistem Informasi,2020,0.86,Aktif,7180066.0
+261,2031036,Wilson Tungli,Sistem Informasi,2020,0.8275,Aktif,1170002.0
+262,2031037,William Gautama,Sistem Informasi,2020,0.9325,Aktif,9150065.0
+263,2031038,Andrew Cen,Sistem Informasi,2020,0.955,Aktif,7180066.0
+264,2031039,Valenteeno Bong,Sistem Informasi,2020,0.9375,Aktif,9200093.0
+265,2031040,Rahel,Sistem Informasi,2020,0.97,Aktif,7190034.0
+266,2031041,Dean Mervyn,Sistem Informasi,2020,0.9175,Aktif,6200076.0
+267,2031042,Vicky Anggrianto,Sistem Informasi,2020,0.96,Aktif,7190034.0
+268,2031043,Kalvin Lee,Sistem Informasi,2020,0.9625,Aktif,7180066.0
+269,2031045,Dirson Wiratama,Sistem Informasi,2020,0.87,Aktif,5170046.0
+270,2031122,Jefry Tan,Sistem Informasi,2020,0.99,Aktif,11200122.0
+271,2031123,Amir,Sistem Informasi,2020,0.955,Lulus,6180042.0
+272,2031124,Sugianto,Sistem Informasi,2020,0.9175,Aktif,5170078.0
+273,2031125,Alexander,Sistem Informasi,2020,0.915,Aktif,11200122.0
+274,2031126,Nila Valerisella,Sistem Informasi,2020,0.9175,Keluar,Unknown
+275,2031127,Steven Kurniawan,Sistem Informasi,2020,0.88,Aktif,3070027.0
+276,2031128,Rio Fernando,Sistem Informasi,2020,0.8625,Aktif,5170046.0
+277,2031129,Junaidi,Sistem Informasi,2020,0.8625,Aktif,1170002.0
+278,2031131,Maziya Azelicha Ayana,Sistem Informasi,2020,0.9475,Aktif,8040139.0
+279,2031132,Tevin Lim,Sistem Informasi,2020,0.97,Aktif,7190035.0
+280,2031133,Delvin,Sistem Informasi,2020,0.915,Drop-out (putus studi),Unknown
+281,2031134,Kelvin,Sistem Informasi,2020,0.9825,Keluar,Unknown
+282,2031135,Jacky,Sistem Informasi,2020,0.92,Aktif,0.0
+283,2031136,Micheal,Sistem Informasi,2020,0.92,Aktif,9180087.0
+284,2031137,Eric Pranata,Sistem Informasi,2020,0.9275,Aktif,9200093.0
+285,2031138,Lip Son,Sistem Informasi,2020,0.99,Aktif,5120028.0
+286,2031139,Handyca Yeng,Sistem Informasi,2020,0.965,Aktif,7190035.0
+287,2031172,Osei Enoch Aboagye,Sistem Informasi,2020,0.9625,Aktif,8180072.0
+288,2131115,Robby Lianto,Sistem Informasi,2021,0.95,Aktif,3150017.0
+289,2131116,Edo Tioputra,Sistem Informasi,2021,0.8675,Aktif,9150065.0
+290,2131117,Eva Eliana Kordelia,Sistem Informasi,2021,0.86,Aktif,9150065.0
+291,2131119,Rezki Sari Putra,Sistem Informasi,2021,0.91,Aktif,2200046.0
+292,2131120,Willy Renaldi,Sistem Informasi,2021,0.8775,Aktif,9180074.0
+293,2131121,Jacky,Sistem Informasi,2021,0.99,Lulus,3150017.0
+294,2131122,Hengki Cahyadi,Sistem Informasi,2021,0.94,Aktif,0.0
+295,2131123,Jasen Kurniawan,Sistem Informasi,2021,0.8975,Aktif,2200046.0
+296,2131124,Dulcie Maria,Sistem Informasi,2021,0.9425,Aktif,1220002.0
+297,2131125,Leslie Febrian,Sistem Informasi,2021,0.955,Aktif,7190034.0
+298,2131126,Skynyrd,Sistem Informasi,2021,0.8825,Aktif,8040139.0
+299,2131127,Vincent Wijaya,Sistem Informasi,2021,0.91,Lulus,6180042.0
+300,2131128,Angga Wahyudi,Sistem Informasi,2021,0.925,Aktif,9180074.0
+301,2131129,Mike Jhonsen,Sistem Informasi,2021,0.8975,Aktif,2200046.0
+302,2131130,Hanif Permadi,Sistem Informasi,2021,0.92,Aktif,11200122.0
+303,2131131,Riko Jovanka,Sistem Informasi,2021,0.91,Aktif,9180087.0
+304,2131132,Suwandi,Sistem Informasi,2021,0.8925,Aktif,7190034.0
+305,2131133,Dhafa Firgana,Sistem Informasi,2021,0.93,Aktif,1170002.0
+306,2131008,Zhilla Syauqina Hafsa,Sistem Informasi,2021,0.8975,Aktif,3070027.0
+307,2131007,Muhammad Hafiz Ivan Irawan,Sistem Informasi,2021,0.9925,Aktif,7190034.0
+308,2131004,Teguh Faizin,Sistem Informasi,2021,0.9125,Aktif,7180066.0
+309,2131152,Silvia Yolanda Oktavia,Sistem Informasi,2021,0.9125,Aktif,0.0
+310,2131145,Joel Hamim Sim,Sistem Informasi,2021,0.815,Aktif,11090111.0
+311,2131150,Yohannes Sibarani,Sistem Informasi,2021,0.875,Aktif,0.0
+312,2131146,Kevin Saputra Utomo,Sistem Informasi,2021,0.98,Aktif,6180042.0
+313,2131136,Ile Arbertus,Sistem Informasi,2021,0.8825,Aktif,9180087.0
+314,2131156,Alex Handro Antolin,Sistem Informasi,2021,0.675,Aktif,0.0
+315,2131001,Alex Chandra,Sistem Informasi,2021,0.9675,Aktif,5120028.0
+316,2131002,Rezky Hasanah Harianja,Sistem Informasi,2021,0.9025,Aktif,1220002.0
+317,2131003,Anthony,Sistem Informasi,2021,0.9875,Aktif,7180066.0
+318,2131005,Winsley,Sistem Informasi,2021,0.95,Aktif,5120028.0
+319,2131011,Kalon Kennedy,Sistem Informasi,2021,0.98,Aktif,5120028.0
+320,2131012,Albert Ricardo Hannuella,Sistem Informasi,2021,1.0,Aktif,6180042.0
+321,2131013,Anweidri Chai,Sistem Informasi,2021,0.97,Aktif,7190034.0
+322,2131014,Willson,Sistem Informasi,2021,0.9875,Aktif,6200076.0
+323,2131015,Christina Chow,Sistem Informasi,2021,0.9525,Aktif,5170078.0
+324,2131016,Melvin Winata,Sistem Informasi,2021,0.9225,Aktif,1220002.0
+325,2131017,Elvin Valentino,Sistem Informasi,2021,0.98,Aktif,8040139.0
+326,2131018,Ziko Riandi,Sistem Informasi,2021,0.9925,Aktif,5120028.0
+327,2131019,Jesen Winardo,Sistem Informasi,2021,0.9875,Aktif,6180042.0
+328,2131020,Delphy Lijaputra,Sistem Informasi,2021,0.985,Aktif,1170002.0
+329,2131021,Jesselyn,Sistem Informasi,2021,0.98,Aktif,8040139.0
+330,2131022,Nellsen Purwandi,Sistem Informasi,2021,0.9875,Aktif,8040139.0
+331,2131135,Kelvin,Sistem Informasi,2021,0.97,Aktif,11200122.0
+332,2131024,Raymond,Sistem Informasi,2021,0.96,Aktif,5120028.0
+333,2131025,Eriki,Sistem Informasi,2021,0.92,Keluar,Unknown
+334,2131026,Avaleska,Sistem Informasi,2021,0.94,Aktif,6200076.0
+335,2131027,Winson Kennedy,Sistem Informasi,2021,0.95,Aktif,2200046.0
+336,2131029,Keisha Octavia Ayana,Sistem Informasi,2021,0.98,Keluar,Unknown
+337,2131030,Kellie Leslie,Sistem Informasi,2021,0.98,Aktif,5170078.0
+338,2131031,Hansvirgo,Sistem Informasi,2021,0.99,Aktif,6180042.0
+339,2131158,Hendy,Sistem Informasi,2021,0.8425,Aktif,9150065.0
+340,2131032,Jevin Leon,Sistem Informasi,2021,0.9775,Aktif,9180087.0
+341,2131141,Yuki Estrada,Sistem Informasi,2021,0.9875,Aktif,8040139.0
+342,2131033,Cindy Juliandry,Sistem Informasi,2021,0.985,Aktif,5170078.0
+343,2131034,Marcellino,Sistem Informasi,2021,0.9875,Aktif,1170002.0
+344,2131035,Delvin Lim,Sistem Informasi,2021,0.99,Aktif,8040139.0
+345,2131036,Chintya Lorenz,Sistem Informasi,2021,0.9875,Aktif,7190035.0
+346,2131037,Jenifer Lim,Sistem Informasi,2021,0.9775,Aktif,5120028.0
+347,2131038,Wenky,Sistem Informasi,2021,0.9925,Aktif,6200076.0
+348,2131039,Jovito Bryant Budiman,Sistem Informasi,2021,0.94,Aktif,5170078.0
+349,2131040,Augustino Sanduo,Sistem Informasi,2021,0.97,Aktif,5120028.0
+350,2131140,Elia,Sistem Informasi,2021,0.9675,Aktif,3150017.0
+351,2131041,Hela Dixman,Sistem Informasi,2021,0.9575,Aktif,7190035.0
+352,2131042,Vincentius Junior Samudra,Sistem Informasi,2021,0.9775,Aktif,9150065.0
+353,2131043,Yoshi Velika,Sistem Informasi,2021,0.985,Aktif,11200122.0
+354,2131044,Jacky,Sistem Informasi,2021,0.94,Aktif,3150017.0
+355,2131045,Derwin Taai,Sistem Informasi,2021,0.9825,Aktif,7190035.0
+356,2131046,Daniel Lo,Sistem Informasi,2021,0.9075,Aktif,9200093.0
+357,2131047,Kendrik Jonatan,Sistem Informasi,2021,0.9625,Aktif,3150017.0
+358,2131048,Jeffrey Andrian,Sistem Informasi,2021,0.965,Aktif,1220002.0
+359,2131049,Navelina,Sistem Informasi,2021,0.9425,Aktif,1220002.0
+360,2131050,Jason Andrian,Sistem Informasi,2021,0.9675,Aktif,1220002.0
+361,2131051,Kelvin,Sistem Informasi,2021,0.9625,Aktif,7190034.0
+362,2131148,Raymond Phang,Sistem Informasi,2021,0.94,Aktif,9180074.0
+363,2131052,Wilson,Sistem Informasi,2021,0.97,Aktif,9200093.0
+364,2131053,Daniel Adventus,Sistem Informasi,2021,0.81,Aktif,2200046.0
+365,2131054,Calvin Anderson,Sistem Informasi,2021,1.0,Aktif,0.0
+366,2131055,Balinda Oca Rosalia,Sistem Informasi,2021,0.925,Lulus,7190035.0
+367,2131056,Mulyanto,Sistem Informasi,2021,0.9525,Aktif,1170002.0
+368,2131057,Ricky Fernando,Sistem Informasi,2021,0.8925,Aktif,9150065.0
+369,2131058,Brien Besley,Sistem Informasi,2021,0.94,Aktif,9200093.0
+370,2131059,Suryo Pramono Liegestu,Sistem Informasi,2021,0.9525,Aktif,9180074.0
+371,2131060,Johan,Sistem Informasi,2021,0.9475,Aktif,3150017.0
+372,2131157,Yan Wahyu,Sistem Informasi,2021,0.9225,Aktif,0.0
+373,2131061,Dini Sari Melati,Sistem Informasi,2021,0.9725,Aktif,9200093.0
+374,2131063,Felix Evans,Sistem Informasi,2021,0.98,Aktif,1170002.0
+375,2131064,Yuliana,Sistem Informasi,2021,0.9425,Aktif,9180087.0
+376,2131065,Ivan Felix,Sistem Informasi,2021,0.9375,Aktif,3150017.0
+377,2131066,Frenkie Tan,Sistem Informasi,2021,0.935,Aktif,9200093.0
+378,2131069,Melvin,Sistem Informasi,2021,0.86,Keluar,Unknown
+379,2131070,Carlos Justin Khomali,Sistem Informasi,2021,0.94,Aktif,9150065.0
+380,2131151,Celvin,Sistem Informasi,2021,0.855,Cuti,Unknown
+381,2131071,Fendy Gunawan,Sistem Informasi,2021,0.9,Aktif,9150065.0
+382,2131072,Vincent So,Sistem Informasi,2021,0.905,Aktif,6200076.0
+383,2131073,Wilson,Sistem Informasi,2021,0.865,Aktif,0.0
+384,2131074,Henry Yono Zhang,Sistem Informasi,2021,0.9525,Aktif,9200093.0
+385,2131075,Carlos Pingsen Pratama,Sistem Informasi,2021,0.9425,Aktif,7190034.0
+386,2131076,Febrianti,Sistem Informasi,2021,0.9025,Aktif,0.0
+387,2131077,Sunoto,Sistem Informasi,2021,0.91,Aktif,7190035.0
+388,2131078,Alpha Reni Syahputri,Sistem Informasi,2021,0.8075,Aktif,0.0
+389,2131080,Sandy Alferro Dion,Sistem Informasi,2021,0.995,Aktif,7180066.0
+390,2131081,Jackson,Sistem Informasi,2021,0.895,Aktif,9200093.0
+391,2131082,Jhon Lim,Sistem Informasi,2021,0.885,Aktif,9200093.0
+392,2131084,Hanita,Sistem Informasi,2021,0.9925,Aktif,1170002.0
+393,2131085,Keaton Yoputra,Sistem Informasi,2021,1.0,Aktif,8040139.0
+394,2131086,Fiona Livianti,Sistem Informasi,2021,0.9725,Aktif,1170002.0
+395,2131088,Melisa,Sistem Informasi,2021,0.945,Aktif,11200122.0
+396,2131153,Julianto Wijaya Akoi Lim,Sistem Informasi,2021,0.9575,Aktif,5120028.0
+397,2131138,Ivan Octovia Mandala,Sistem Informasi,2021,0.9175,Aktif,1210002.0
+398,2131090,Irfansyah,Sistem Informasi,2021,0.955,Aktif,9180074.0
+399,2131091,Muhammad Syahrul Nizam,Sistem Informasi,2021,0.9375,Aktif,9180074.0
+400,2131092,Vincent,Sistem Informasi,2021,0.915,Aktif,5170078.0
+401,2131093,Febby Anggellya,Sistem Informasi,2021,0.955,Aktif,7190034.0
+402,2131094,Hin Vi To,Sistem Informasi,2021,0.93,Aktif,6180042.0
+403,2131095,Cahya Kelvin,Sistem Informasi,2021,0.95,Aktif,1220002.0
+404,2131096,Tito Adrian Pribadi,Sistem Informasi,2021,0.9225,Aktif,8180072.0
+405,2131097,Winsen Khoesasi,Sistem Informasi,2021,0.905,Aktif,1170002.0
+406,2131098,Andi Muhammad Ridwan,Sistem Informasi,2021,0.8525,Aktif,3070027.0
+407,2131099,Erica Titoni,Sistem Informasi,2021,0.9725,Aktif,9150065.0
+408,2131100,Ari Firmansah,Sistem Informasi,2021,0.8575,Aktif,11090111.0
+409,2131101,Aini Iswanela Anbarwati,Sistem Informasi,2021,0.9475,Aktif,6200076.0
+410,2131102,Jonathan Wijaya,Sistem Informasi,2021,0.9425,Aktif,5170078.0
+411,2131103,Philander Alvando Davian,Sistem Informasi,2021,0.8775,Aktif,5170078.0
+412,2131104,MUHAMMAD RAYHAN,Sistem Informasi,2021,0.925,Aktif,0.0
+413,2131139,William Nurdin Wijaya,Sistem Informasi,2021,0.975,Aktif,6200076.0
+414,2131105,Jerri Phua,Sistem Informasi,2021,0.9,Aktif,2200046.0
+415,2131106,Alika Naziera Wardani,Sistem Informasi,2021,0.9475,Aktif,7180066.0
+416,2231004,Brian Tracia Bahagia,Sistem Informasi,2022,0.915,Aktif,0.0
+417,2231005,Joanntika Lewis,Sistem Informasi,2022,0.9925,Aktif,0.0
+418,2231006,Yulsen,Sistem Informasi,2022,0.9675,Aktif,0.0
+419,2231007,Vincent Claudius Santoso,Sistem Informasi,2022,0.9475,Aktif,0.0
+420,2231179,Sherina,Sistem Informasi,2022,0.9225,Aktif,0.0
+421,2231008,Encik Mohammad Habib Tara,Sistem Informasi,2022,0.91,Aktif,0.0
+422,2231009,Inov Santoso,Sistem Informasi,2022,0.9675,Aktif,0.0
+423,2231010,Juan Reza Rizkilmy,Sistem Informasi,2022,1.0,Aktif,0.0
+424,2231011,Clarita,Sistem Informasi,2022,1.0,Aktif,0.0
+425,2231013,Nabila Tri Ananda,Sistem Informasi,2022,0.8825,Keluar,Unknown
+426,2231014,Farrel Ardhatama,Sistem Informasi,2022,0.91,Aktif,0.0
+427,2231015,Dzaki Muhammad,Sistem Informasi,2022,0.7725,Aktif,0.0
+428,2231016,Randy Sitompul,Sistem Informasi,2022,0.755,Aktif,0.0
+429,2231017,Eric,Sistem Informasi,2022,0.855,Aktif,0.0
+430,2231018,Jupiter Agustio Liu Siaw Ping,Sistem Informasi,2022,0.9925,Aktif,0.0
+431,2231019,Wilson,Sistem Informasi,2022,0.865,Aktif,0.0
+432,2231020,Kevin Lius,Sistem Informasi,2022,0.97,Aktif,0.0
+433,2231001,Steby,Sistem Informasi,2022,0.885,Aktif,0.0
+434,2231003,Vincent,Sistem Informasi,2022,0.945,Aktif,0.0
+435,2231002,JETSET,Sistem Informasi,2022,0.925,Aktif,0.0
+436,2231021,Nancy Vanessa,Sistem Informasi,2022,1.0,Aktif,0.0
+437,2231022,Anderson Arvando,Sistem Informasi,2022,0.9925,Aktif,0.0
+438,2231024,Riyaldi Walvinson,Sistem Informasi,2022,0.99,Aktif,0.0
+439,2231025,Alex Winarli,Sistem Informasi,2022,0.99,Aktif,0.0
+440,2231026,Erved,Sistem Informasi,2022,0.9675,Aktif,0.0
+441,2231027,Darren,Sistem Informasi,2022,1.0,Aktif,0.0
+442,2231028,Winson Napoleon,Sistem Informasi,2022,1.0,Aktif,0.0
+443,2231029,Eric Valentino,Sistem Informasi,2022,0.9925,Aktif,0.0
+444,2231030,Andrian,Sistem Informasi,2022,0.9925,Aktif,0.0
+445,2231031,Jessica Gabriella,Sistem Informasi,2022,0.99,Aktif,0.0
+446,2231032,Ricky Roy Nardson,Sistem Informasi,2022,0.9925,Aktif,0.0
+447,2231033,Jackson Candra Dinata,Sistem Informasi,2022,0.9925,Aktif,0.0
+448,2231035,Jesen,Sistem Informasi,2022,0.86,Keluar,Unknown
+449,2231036,Martius Lim,Sistem Informasi,2022,0.985,Aktif,0.0
+450,2231037,Willsen Austin,Sistem Informasi,2022,0.9625,Aktif,0.0
+451,2231187,Jason Phang,Sistem Informasi,2022,1.0,Aktif,0.0
+452,2231038,Vania Vidella,Sistem Informasi,2022,0.9025,Aktif,0.0
+453,2231039,Foli Dienro,Sistem Informasi,2022,0.9625,Aktif,0.0
+454,2231040,Shermay,Sistem Informasi,2022,0.99,Aktif,0.0
+455,2231041,Rendi Suriadi,Sistem Informasi,2022,0.9175,Aktif,0.0
+456,2231180,Efraim Yedija,Sistem Informasi,2022,0.8625,Keluar,Unknown
+457,2231042,Jackson,Sistem Informasi,2022,1.0,Aktif,0.0
+458,2231043,Angelica Laura Loren,Sistem Informasi,2022,0.9675,Aktif,0.0
+459,2231044,Jhony Susanto,Sistem Informasi,2022,0.97,Aktif,0.0
+460,2231045,Vincent Lim,Sistem Informasi,2022,1.0,Aktif,0.0
+461,2231046,Clara Audelia,Sistem Informasi,2022,1.0,Aktif,0.0
+462,2231047,Zoey Julyance,Sistem Informasi,2022,0.985,Aktif,0.0
+463,2231048,Paerin,Sistem Informasi,2022,0.99,Aktif,0.0
+464,2231049,Felicia Diana Rose,Sistem Informasi,2022,0.9925,Aktif,0.0
+465,2231050,Julianto,Sistem Informasi,2022,0.9925,Aktif,0.0
+466,2231051,Davina,Sistem Informasi,2022,0.99,Aktif,0.0
+467,2231052,Jesen Jeverlino,Sistem Informasi,2022,0.97,Aktif,0.0
+468,2231053,Fenky,Sistem Informasi,2022,0.9775,Aktif,0.0
+469,2231054,Fellyanto,Sistem Informasi,2022,0.9775,Aktif,0.0
+470,2231055,Risna Yunita,Sistem Informasi,2022,1.0,Aktif,0.0
+471,2231056,Vincent Capricornness,Sistem Informasi,2022,0.99,Aktif,0.0
+472,2231057,Joshua Lucas Samudra,Sistem Informasi,2022,0.9475,Aktif,0.0
+473,2231058,Erwin,Sistem Informasi,2022,0.99,Aktif,0.0
+474,2231059,Jannes Velando,Sistem Informasi,2022,0.945,Aktif,0.0
+475,2231060,Hernando,Sistem Informasi,2022,0.9925,Aktif,0.0
+476,2231061,Erwin,Sistem Informasi,2022,0.9675,Aktif,0.0
+477,2231063,Joyce,Sistem Informasi,2022,1.0,Aktif,0.0
+478,2231064,Fernando Jose,Sistem Informasi,2022,0.99,Aktif,0.0
+479,2231065,Deric Cahyadi,Sistem Informasi,2022,0.9775,Aktif,0.0
+480,2231066,Joven Lim,Sistem Informasi,2022,0.9175,Aktif,0.0
+481,2231067,Jefriyanto Chandra,Sistem Informasi,2022,1.0,Aktif,0.0
+482,2231068,Muhammad Arif Guntara,Sistem Informasi,2022,0.96,Aktif,0.0
+483,2231069,Elvin Lee,Sistem Informasi,2022,0.925,Aktif,0.0
+484,2231070,Victor Fernando,Sistem Informasi,2022,0.91,Aktif,0.0
+485,2231071,Vanessa Felicia Leedora,Sistem Informasi,2022,1.0,Aktif,0.0
+486,2231072,Mieko Huang Vincent,Sistem Informasi,2022,0.93,Aktif,0.0
+487,2231073,Wilson,Sistem Informasi,2022,1.0,Aktif,0.0
+488,2231074,Selina,Sistem Informasi,2022,0.99,Aktif,0.0
+489,2231075,Wesly,Sistem Informasi,2022,0.9825,Aktif,0.0
+490,2231076,Angeline,Sistem Informasi,2022,0.9775,Aktif,0.0
+491,2231190,Nicolaus Tommy Prasetyo,Sistem Informasi,2022,0.925,Aktif,0.0
+492,2231077,Sherley Angelia,Sistem Informasi,2022,0.99,Aktif,0.0
+493,2231078,Sefryanto Valentinus,Sistem Informasi,2022,0.9675,Aktif,0.0
+494,2231186,Shelomitha Diah Revi Ayuni,Sistem Informasi,2022,0.99,Aktif,0.0
+495,2231195,Desi Renata Sinurat,Sistem Informasi,2022,0.915,Aktif,0.0
+496,2231188,Owen Evander,Sistem Informasi,2022,0.9225,Aktif,0.0
+497,2231079,Angel su,Sistem Informasi,2022,0.9925,Aktif,0.0
+498,2231080,William,Sistem Informasi,2022,0.9925,Aktif,0.0
+499,2231082,Josua Yoprisyanto,Sistem Informasi,2022,1.0,Aktif,0.0
+500,2231083,Ivan Susanto,Sistem Informasi,2022,1.0,Aktif,0.0
+501,2231084,Meurco Desiderio,Sistem Informasi,2022,0.8125,Aktif,0.0
+502,2231086,Chelsea Hilton,Sistem Informasi,2022,1.0,Aktif,0.0
+503,2231087,Calvin,Sistem Informasi,2022,0.9225,Aktif,0.0
+504,2231088,Albet Novendo,Sistem Informasi,2022,0.97,Aktif,0.0
+505,2231089,Francisco,Sistem Informasi,2022,0.9,Aktif,0.0
+506,2231090,Cindy Claudia Erica,Sistem Informasi,2022,0.9675,Aktif,0.0
+507,2231092,Nelson Handoko,Sistem Informasi,2022,0.9225,Aktif,0.0
+508,2231093,Wira Erlangga Pratama,Sistem Informasi,2022,0.94,Aktif,0.0
+509,2231094,Jonathan Sukianto,Sistem Informasi,2022,0.9675,Aktif,0.0
+510,2231095,Austin Nobby,Sistem Informasi,2022,0.915,Aktif,0.0
+511,2231191,Kelvin,Sistem Informasi,2022,0.9675,Aktif,0.0
+512,2231096,Atnan Arianderson,Sistem Informasi,2022,0.9775,Aktif,0.0
+513,2231097,Yanto,Sistem Informasi,2022,0.8875,Aktif,0.0
+514,2231098,Dedy Susanto,Sistem Informasi,2022,0.9325,Aktif,0.0
+515,2231099,Louis Zeng,Sistem Informasi,2022,0.9675,Aktif,0.0
+516,2231182,Rayson Wijaya,Sistem Informasi,2022,0.97,Aktif,0.0
+517,2231178,Ricky Jong,Sistem Informasi,2022,0.945,Aktif,0.0
+518,2231100,Vivian Febri Ningsih,Sistem Informasi,2022,0.865,Aktif,0.0
+519,2231101,Devina Benhans,Sistem Informasi,2022,0.9525,Aktif,0.0
+520,2231102,Febrianty Forrensa,Sistem Informasi,2022,0.99,Aktif,0.0
+521,2231103,Raymond Lee,Sistem Informasi,2022,0.9325,Aktif,0.0
+522,2231104,Stanley,Sistem Informasi,2022,0.91,Aktif,0.0
+523,2231105,Isaac Julio Herodion,Sistem Informasi,2022,0.865,Aktif,0.0
+524,2231107,Andreas Valentino Pratama,Sistem Informasi,2022,0.895,Aktif,0.0
+525,2231108,Stanley Jumaryo,Sistem Informasi,2022,0.8875,Aktif,0.0
+526,2231109,Wirianto,Sistem Informasi,2022,0.9225,Aktif,0.0
+527,2231110,Harianto,Sistem Informasi,2022,1.0,Aktif,0.0
+528,2231111,Elfan Sandriawan,Sistem Informasi,2022,0.9775,Aktif,0.0
+529,2231112,Sylvester,Sistem Informasi,2022,0.93,Aktif,0.0
+530,2231173,Cholas Fernando,Sistem Informasi,2022,0.845,Aktif,0.0
+531,2231113,Delon Erlando,Sistem Informasi,2022,0.9275,Keluar,Unknown
+532,2231114,Jenny Tan,Sistem Informasi,2022,1.0,Aktif,0.0
+533,2231115,Delvin Jason,Sistem Informasi,2022,0.9775,Aktif,0.0
+534,2231117,Endrico,Sistem Informasi,2022,0.99,Aktif,0.0
+535,2231118,Erwin,Sistem Informasi,2022,0.9475,Aktif,0.0
+536,2231119,Rubin,Sistem Informasi,2022,0.9675,Aktif,0.0
+537,2231120,Kevin Gernaldi,Sistem Informasi,2022,0.9925,Aktif,0.0
+538,2231183,Joen,Sistem Informasi,2022,0.91,Aktif,0.0
+539,2231121,Lidya Christina,Sistem Informasi,2022,0.9675,Aktif,0.0
+540,2231122,Aisyah Nurkayla,Sistem Informasi,2022,0.945,Aktif,0.0
+541,2231194,Stefanie,Sistem Informasi,2022,0.99,Aktif,0.0
+542,2231123,Syasya Tri Puspita Dewi,Sistem Informasi,2022,0.97,Aktif,0.0
+543,2231124,Kelvin Jonatan,Sistem Informasi,2022,0.9075,Aktif,0.0
+544,2231125,Melisa,Sistem Informasi,2022,0.8725,Aktif,0.0
+545,2231211,Steven,Sistem Informasi,2022,0.9025,Keluar,Unknown
+546,1931196,Fitra Abdi Agustian,Sistem Informasi,2019,0.785,Lulus,1170002.0
+547,1931199,Nadiyah,Sistem Informasi,2019,0.8775,Drop-out (putus studi),Unknown
+548,1931200,Kamelia,Sistem Informasi,2019,0.785,Lulus,5120028.0
+549,2031185,Ery Setiawan Nababan,Sistem Informasi,2020,0.705,Lulus,1170002.0
+550,1931193,Aina Najeehah Binti Anuar,Sistem Informasi,2019,1.0,Mahasiswa Asing,Unknown
+551,1931194,Nur Aklinda Binti Mansor,Sistem Informasi,2019,1.0,Mahasiswa Asing,Unknown
+552,2131107,Bryan Aditya,Sistem Informasi,2021,0.945,Aktif,3070027.0
+553,2131149,Mulyanto,Sistem Informasi,2021,0.895,Aktif,3150017.0
+554,2131108,Fedrick Lim,Sistem Informasi,2021,0.935,Aktif,6200076.0
+555,2131109,Fanni Tanisya,Sistem Informasi,2021,0.945,Aktif,11200122.0
+556,2131110,Sri Indriyani Ningrum,Sistem Informasi,2021,0.9325,Aktif,0.0
+557,2131144,Mellya Zahra Pangestu,Sistem Informasi,2021,0.915,Aktif,11200122.0
+558,2131111,Vicky Tantri,Sistem Informasi,2021,0.8675,Aktif,0.0
+559,2131113,Alberta Adeline Marvel,Sistem Informasi,2021,0.9675,Aktif,1170002.0
+560,2131114,Riski Wulandari Hutagaol,Sistem Informasi,2021,0.925,Aktif,0.0
+561,2231159,Muhammad Fajar Farizi,Sistem Informasi,2022,0.89,Aktif,0.0
+562,2231163,Stanley,Sistem Informasi,2022,0.96,Aktif,0.0
+563,2231212,Mukhammad Dwi Prasetyo,Sistem Informasi,2022,0.8925,Aktif,0.0
+564,2231174,Danel Smile,Sistem Informasi,2022,0.9325,Aktif,0.0
+565,2231160,Arwin Samuel,Sistem Informasi,2022,0.885,Aktif,0.0
+566,2231175,Hafizh Akmal,Sistem Informasi,2022,0.7575,Aktif,0.0
+567,2231165,Halimah,Sistem Informasi,2022,0.81,Aktif,0.0
+568,2231196,Ericks Setiawan,Sistem Informasi,2022,0.8375,Aktif,0.0
+569,2231197,Leon Agustian Salim,Sistem Informasi,2022,0.9775,Aktif,0.0
+570,1931201,Eka Meriyadi,Sistem Informasi,2019,0.0,Keluar,Unknown
+571,2231198,Fajar Anugrah Dwi Setiawan,Sistem Informasi,2022,0.875,Aktif,0.0
+572,2231213,Khafidh Al-Karan Caniago,Sistem Informasi,2022,0.87,Aktif,0.0
+573,2231200,Inocenth Ramdhany,Sistem Informasi,2022,0.8275,Aktif,0.0
+574,2231201,Muhammad Tsabit Tamani,Sistem Informasi,2022,0.8125,Aktif,0.0
+575,2231209,Kosupandi,Sistem Informasi,2022,0.94,Keluar,Unknown
+576,2231210,Muhammad Raka Arya Bintang,Sistem Informasi,2022,0.9325,Aktif,0.0
+577,2231202,Dennis Sidartha Tan,Sistem Informasi,2022,0.97,Aktif,0.0
+578,2231126,Muhammad Alfiq Zhian,Sistem Informasi,2022,0.9675,Aktif,0.0
+579,2231127,Mellberg Limanda,Sistem Informasi,2022,0.945,Aktif,0.0
+580,2231128,Mega Hardianti Kho,Sistem Informasi,2022,1.0,Aktif,0.0
+581,2231129,Christopher,Sistem Informasi,2022,0.8825,Aktif,0.0
+582,2231130,Java Ardiandi Junus Loden,Sistem Informasi,2022,0.9625,Aktif,0.0
+583,2231131,Ruben Pangeran Pangestu,Sistem Informasi,2022,0.9775,Aktif,0.0
+584,2231132,Jeffri Liu,Sistem Informasi,2022,0.9925,Aktif,0.0
+585,2231133,Vallen Angellito,Sistem Informasi,2022,0.9775,Aktif,0.0
+586,2231135,Darren Huang,Sistem Informasi,2022,0.9225,Aktif,0.0
+587,2231136,Evelyne Huangsajaya,Sistem Informasi,2022,0.9825,Aktif,0.0
+588,2231137,Muhammad Yassin,Sistem Informasi,2022,0.84,Aktif,0.0
+589,2231138,Davin Lim,Sistem Informasi,2022,1.0,Aktif,0.0
+590,2231139,Ficky Antonio,Sistem Informasi,2022,0.9675,Aktif,0.0
+591,2231140,Febrianto,Sistem Informasi,2022,0.955,Aktif,0.0
+592,2231141,Bryan Kenedy,Sistem Informasi,2022,1.0,Aktif,0.0
+593,2231192,Andry Junianto,Sistem Informasi,2022,0.99,Aktif,0.0
+594,2231142,Grace Augusuriyanti,Sistem Informasi,2022,1.0,Aktif,0.0
+595,2231143,Angelina Rianti,Sistem Informasi,2022,1.0,Aktif,0.0
+596,2231145,Antoni Foo Siang An,Sistem Informasi,2022,0.9675,Aktif,0.0
+597,2231146,Muthia Andini,Sistem Informasi,2022,0.9925,Aktif,0.0
+598,2231185,Lewis Tan,Sistem Informasi,2022,0.91,Aktif,0.0
+599,2231176,Helena,Sistem Informasi,2022,0.9825,Aktif,0.0
+600,2231147,Benson Pang Tian Poh,Sistem Informasi,2022,0.9675,Aktif,0.0
+601,2231148,Wildan Laksmana Sakti,Sistem Informasi,2022,0.9,Aktif,0.0
+602,2231149,Randy Heskyel Gumolung,Sistem Informasi,2022,1.0,Aktif,0.0
+603,2231150,Delviani,Sistem Informasi,2022,0.93,Aktif,0.0
+604,2231166,Jonathan,Sistem Informasi,2022,0.9675,Aktif,0.0
+605,2231151,Dabbyt Tino,Sistem Informasi,2022,0.9675,Aktif,0.0
+606,2231152,Gary Happydinata,Sistem Informasi,2022,1.0,Aktif,0.0
+607,2231153,Anjelica,Sistem Informasi,2022,0.945,Aktif,0.0
+608,2231154,Monica Sonia,Sistem Informasi,2022,1.0,Aktif,0.0
+609,2231155,Hansen Jonatan,Sistem Informasi,2022,0.9525,Aktif,0.0
+610,2231184,Willson Andrew,Sistem Informasi,2022,1.0,Aktif,0.0
+611,2231193,Jefrry Arispratama,Sistem Informasi,2022,1.0,Aktif,0.0
+612,2231156,Junaidi,Sistem Informasi,2022,0.97,Aktif,0.0
+613,2231157,Joen Lie,Sistem Informasi,2022,1.0,Aktif,0.0
+614,2231208,Nadya Natasha,Sistem Informasi,2022,0.94,Aktif,0.0
+615,2231167,Rusel Hutajulu,Sistem Informasi,2022,0.99,Aktif,0.0
+616,2231203,Leona Stephanie Lesilolo,Sistem Informasi,2022,0.94,Aktif,0.0
+617,2231204,Nanda Salsabila,Sistem Informasi,2022,0.8325,Aktif,0.0
+618,2231205,Rismayana,Sistem Informasi,2022,0.955,Aktif,0.0
+619,2231206,Kelvin Tang,Sistem Informasi,2022,0.9925,Aktif,0.0
+620,2231207,Zaspin,Sistem Informasi,2022,1.0,Aktif,0.0
+621,1931065,Vera,Sistem Informasi,2019,0.96,Lulus,6200076.0
+622,1931133,Kelven Liong,Sistem Informasi,2019,0.955,Lulus,9200093.0
+623,2031140,Marvin Christian,Sistem Informasi,2020,1.0,Aktif,8040139.0
+624,1931142,Indra Saputra,Sistem Informasi,2019,0.93,Lulus,8040139.0
+625,1931041,Wisely Liang,Sistem Informasi,2019,0.9725,Lulus,11200122.0
+626,2031141,Lucky Aprianto,Sistem Informasi,2020,0.925,Aktif,5170078.0
+627,2031142,Kusnan,Sistem Informasi,2020,0.9025,Aktif,1220002.0
+628,2031143,Vincent Vannesse Ting,Sistem Informasi,2020,0.865,Aktif,0.0
+629,2031145,Wiewin Wiranata,Sistem Informasi,2020,0.825,Keluar,Unknown
+630,1931046,Kenny,Sistem Informasi,2019,0.9525,Lulus,7190034.0
+631,1931075,Loren,Sistem Informasi,2019,0.9175,Lulus,1170002.0
+632,1931069,Cindy Ariadi,Sistem Informasi,2019,0.935,Lulus,5120028.0
+633,1931070,Jenny Oei,Sistem Informasi,2019,0.9175,Lulus,5120028.0
+634,1931043,Tan Sung Pheng,Sistem Informasi,2019,0.9075,Lulus,11200122.0
+635,1931057,Hosse Fernando,Sistem Informasi,2019,0.9575,Lulus,3150017.0
+636,1931137,Evan Charles,Sistem Informasi,2019,0.945,Lulus,7180066.0
+637,1931035,Ellwan Edy Wei,Sistem Informasi,2019,0.95,Lulus,9200093.0
+638,1931068,Calvin Pang,Sistem Informasi,2019,0.8925,Lulus,9180074.0
+639,1931179,Veri Hartanto,Sistem Informasi,2019,0.9775,Lulus,5120028.0
+640,1931110,Kevin Junaidi,Sistem Informasi,2019,0.9225,Lulus,1170002.0
+641,1931168,Hendro,Sistem Informasi,2019,0.92,Lulus,5120028.0
+642,1931169,Roy Valentino Chandra,Sistem Informasi,2019,0.9575,Lulus,7190035.0
+643,1931103,Kusuma Batara Limto Pangestu,Sistem Informasi,2019,0.8875,Aktif,0.0
+644,1931164,David,Sistem Informasi,2019,0.8775,Lulus,0.0
+645,1931096,Melvin,Sistem Informasi,2019,0.8975,Lulus,8040139.0
+646,2031146,Stephani Lim,Sistem Informasi,2020,0.99,Aktif,7180066.0
+647,2031147,Mercylyawati,Sistem Informasi,2020,0.96,Aktif,6180042.0
+648,2031148,Justin Chua,Sistem Informasi,2020,0.9175,Aktif,7190034.0
+649,2031149,Ivan Hendardi,Sistem Informasi,2020,0.965,Aktif,1170002.0
+650,2031150,Jackfranco,Sistem Informasi,2020,0.9425,Aktif,9180087.0
+651,2031151,Ricky,Sistem Informasi,2020,0.9325,Aktif,3070027.0
+652,2031152,Valentino Chen,Sistem Informasi,2020,0.9725,Aktif,0.0
+653,2031153,Kevin Alexander,Sistem Informasi,2020,0.9725,Aktif,7190034.0
+654,2031154,Pangestu,Sistem Informasi,2020,0.96,Aktif,5120028.0
+655,2031155,Edi Santoso,Sistem Informasi,2020,0.9,Aktif,9150065.0
+656,2031156,Jaslina,Sistem Informasi,2020,0.99,Aktif,1170002.0
+657,2031157,Farhan Alwie Rasyidhy,Sistem Informasi,2020,0.8925,Aktif,1170002.0
+658,2031158,Jensen Tanedy,Sistem Informasi,2020,0.9725,Aktif,5170046.0
+659,2031159,Wesley Peterson Lee,Sistem Informasi,2020,0.8825,Aktif,9180074.0
+660,2031160,Nicky Nicholas,Sistem Informasi,2020,0.9225,Aktif,3150017.0
+661,2031161,Kevin Charles,Sistem Informasi,2020,0.9675,Aktif,3150017.0
+662,2031162,Vinson,Sistem Informasi,2020,0.9725,Aktif,1220002.0
+663,2031163,Kelvin,Sistem Informasi,2020,0.935,Keluar,Unknown
+664,2031164,Ricky,Sistem Informasi,2020,0.9525,Aktif,11200122.0
+665,2031166,Ryan Kenidy,Sistem Informasi,2020,0.9775,Aktif,7190035.0
+666,2031174,Suryani,Sistem Informasi,2020,0.955,Aktif,6180042.0
+667,2031167,Ricky Wijaya,Sistem Informasi,2020,0.965,Aktif,7190035.0
+668,2031168,Kenny Wilson,Sistem Informasi,2020,0.865,Aktif,9150065.0
+669,2031170,Sudy,Sistem Informasi,2020,0.8775,Aktif,7190035.0
+670,2031171,Ryandy Sonata,Sistem Informasi,2020,0.9275,Aktif,9200093.0
+671,2231158,Ihsan Havin,Sistem Informasi,2022,0.83,Aktif,0.0
+672,1931198,Desi Melanda Sari,Sistem Informasi,2019,0.0,Keluar,Unknown
+673,1931197,Jhoni Winata,Sistem Informasi,2019,0.0,Keluar,Unknown
