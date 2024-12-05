@@ -1,140 +1,135 @@
-import mysql.connector.cursor
-import numpy as np 
-from flask import Flask , request , jsonify
-import joblib
-import mysql.connector
-from flask_cors import CORS 
+from flask import Flask, request, jsonify, session
+from flask_cors import CORS
 import pandas as pd
-from sklearn.preprocessing import MinMaxScaler , StandardScaler
-
-
+import os
+import datetime
+import json
+import joblib
+from sklearn.preprocessing import MinMaxScaler
+import jwt
+import mysql.connector
 
 app = Flask(__name__)
+CORS(app , supports_credentials=True )
 
-CORS(app)
+# Secret key untuk sesi
+app.config['SECRET_KEY'] = 'sisrekomact-backend-secure-key#2024'
 
-# config MySQL
+# Konfigurasi database
 db_config = {
-    "host" : "localhost",
-    "user" : "root",
-    "password" : "" , 
-    "database" : "sisrekomact"
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "sisrekomact"
 }
+db_connection = mysql.connector.connect(**db_config)
 
+# Load KMeans model
 def load_model():
     return joblib.load('kmeans_model.joblib')
 
-db_connection = mysql.connector.connect(**db_config)
-
-
-@app.route('/')
-def Home():
-    return {"status" : "true" , "message" : "Berhasil menjalankan server"}
-
-
-@app.route('/eda-mahasiswa', methods=['GET'])
-def eda_mahasiswa():
-    # Fetch data from the database
-    query = "SELECT * FROM dataset_mahasiswa"
-    data = pd.read_sql(query, db_connection)
-
-    # Clean the data
-    data = data.dropna(subset=['ipk_mahasiswa', 'pembimbing_tugas_akhir'])
-    data = data.drop_duplicates()
-
-    # Update the cleaned data back into the database
-    cursor = db_connection.cursor(dictionary=True)
-    for index, row in data.iterrows():
-        update_query = """
-            UPDATE dataset_mahasiswa
-            SET ipk_mahasiswa = %s, pembimbing_tugas_akhir = %s
-            WHERE id = %s
-        """
-        cursor.execute(update_query, (row['ipk_mahasiswa'], row['pembimbing_tugas_akhir'], row['id']))  # Assuming 'id' is the primary key
-    db_connection.commit()  # Commit the changes to the database
-
-    # Return the cleaned data as JSON
-    return jsonify(data.to_dict(orient='records'))
-
-
-@app.route('/eda-krs', methods=['GET'])
-def eda_krs():
-    # Query to fetch data
-    query = "SELECT * FROM dataset_krs"
-    data = pd.read_sql(query, db_connection)
-
-    # Clean and modify data
-    data = data.dropna(subset=['kode_nilai'])
-    data = data.drop_duplicates()
-    data['kode_nilai'] = data['kode_nilai'].replace('A', 4)
-    data['kode_nilai'] = data['kode_nilai'].replace('B', 3)
-    data['kode_nilai'] = data['kode_nilai'].replace('C', 2)
-    data['kode_nilai'] = data['kode_nilai'].replace('D', 1)
-    data['kode_nilai'] = data['kode_nilai'].replace('E', 0)
-    data['kode_nilai'].fillna(0, inplace=True)
-
-    # Update the database with modified data
-    cursor = db_connection.cursor(dictionary=True)
-    for index, row in data.iterrows():
-        update_query = """
-            UPDATE dataset_krs
-            SET kode_nilai = %s
-            WHERE id = %s
-        """
-        cursor.execute(update_query, (row['kode_nilai'], row['id']))  # Assuming 'id' is the primary key
-    db_connection.commit()  # Commit the changes to the database
-
-    # Return the modified data as JSON
-    return jsonify(data.to_dict(orient='records'))
-
-
-
-    
-
-@app.route('/eda-kegiatan' , methods=['GET'])
-def eda_kegiatan():
-    query = "SELECT * FROM dataset_kegiatanmahasiswa"
-    data = pd.read_sql(query , db_connection)
-    data = data.dropna()
-    data = data.drop_duplicates(inplace=True)
-
-    return jsonify(data.to_dict(orient='records'))
-
-import os
-import json
-
-# File to store cached results
+# Load cache dari file
 CACHE_FILE = "cluster_cache.json"
 
-# Load cache from file on startup
 def load_cache():
     if os.path.exists(CACHE_FILE):
         with open(CACHE_FILE, "r") as file:
             return json.load(file)
     return {}
 
-# Save cache to file
 def save_cache(cache):
     with open(CACHE_FILE, "w") as file:
         json.dump(cache, file)
 
-# Initialize the cache
 cluster_cache = load_cache()
 
+@app.route('/login', methods=['POST'])
+def login():
+    try:
+        data = request.json
+        npm_mahasiswa = data.get('npm_mahasiswa')
+        password = data.get('password')
+
+        if not npm_mahasiswa or not password:
+            return jsonify({"status": "error", "message": "npm_mahasiswa and password are required"}), 400
+
+        # Cari mahasiswa di database
+        query = "SELECT * FROM dataset_mahasiswa WHERE npm_mahasiswa = %s"
+        cursor = db_connection.cursor(dictionary=True)
+        cursor.execute(query, (npm_mahasiswa,))
+        mahasiswa = cursor.fetchone()
+
+        if not mahasiswa:
+            return jsonify({"status": "error", "message": "Mahasiswa not found"}), 404
+
+        # Validasi password (misalnya menggunakan bcrypt untuk perbandingan)
+        if password != mahasiswa['npm_mahasiswa']:  # Periksa apakah password sesuai dengan npm_mahasiswa
+            return jsonify({"status": "error", "message": "Invalid credentials"}), 401
+
+        # Membuat JWT Token
+        payload = {
+            'npm_mahasiswa': mahasiswa['npm_mahasiswa'],
+            'nama_mahasiswa': mahasiswa['nama_mahasiswa'],
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)  # Token akan kedaluwarsa dalam 1 jam
+        }
+        token = jwt.encode(payload, app.config['SECRET_KEY'], algorithm='HS256')
+
+        # Simpan data pengguna di sesi (opsional, jika Anda juga ingin menggunakan session)
+        session['npm_mahasiswa'] = mahasiswa['npm_mahasiswa']
+        session['nama_mahasiswa'] = mahasiswa['nama_mahasiswa']
+
+        # Kirim token ke client
+        return jsonify({
+            "status": "success",
+            "message": "Login successful",
+            "npm_mahasiswa": mahasiswa['npm_mahasiswa'],
+            "nama_mahasiswa": mahasiswa['nama_mahasiswa'],
+            "token": token  # Kirim token ke frontend
+        })
+
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+# Logout endpoint
+@app.route('/logout', methods=['POST'])
+def logout():
+    session.clear()
+    return jsonify({"status": "success", "message": "Logout successful"})
+
+# Protected rekomendasi endpoint
 @app.route('/rekomendasi', methods=['GET'])
 def rata_rata_dan_rekomendasi():
     try:
-        npm_mahasiswa = request.args.get('npm_mahasiswa')  # Get npm_mahasiswa from the query parameters
+        # Get the token from the request header
+        token = request.headers.get('Authorization')
 
-        if not npm_mahasiswa:
-            return jsonify({"status": "error", "message": "npm_mahasiswa is required"}), 400
+        print(f"Token from request: {token}")
+
+        # If no token is provided, return an error
+        if not token:
+            return jsonify({"status": "error", "message": "Token is missing"}), 401
+
+        # Check the token format (bearer token)
+        if token.startswith('Bearer '):
+            token = token[7:]  # Remove the 'Bearer ' prefix
+
+        # Decode the JWT token (assuming you have a secret key for JWT)
+        try:
+            decoded_token = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+            npm_mahasiswa = decoded_token['npm_mahasiswa']
+            nama_mahasiswa = decoded_token['nama_mahasiswa']
+        except jwt.ExpiredSignatureError:
+            return jsonify({"status": "error", "message": "Token has expired"}), 401
+        except jwt.InvalidTokenError:
+            return jsonify({"status": "error", "message": "Invalid token"}), 401
+
+        
 
         # Check if the cluster and rata-rata are already cached
         if npm_mahasiswa in cluster_cache:
             cluster = cluster_cache[npm_mahasiswa]['cluster']
             rata_rata = cluster_cache[npm_mahasiswa]['rata_rata']
         else:
-            # Use SQL's AVG to calculate the averages directly
             query = """
             SELECT 
                 npm_mahasiswa,
@@ -143,68 +138,54 @@ def rata_rata_dan_rekomendasi():
             FROM dataset_krs
             GROUP BY npm_mahasiswa, kategori_matakuliah
             """
-            # Execute the query and load the data into a DataFrame
             df = pd.read_sql(query, db_connection)
-
-            # Drop duplicate rows
             df = df.drop_duplicates()
 
-            # Pivot the DataFrame to get each category as a column
             pivot_df = df.pivot(
                 index="npm_mahasiswa",
                 columns="kategori_matakuliah",
                 values="rata_rata_nilai"
             ).reset_index()
 
-            # Clean column names
             pivot_df.columns = pivot_df.columns.str.strip()
             pivot_df = pivot_df.loc[:, ~pivot_df.columns.duplicated()]
 
-            # Remove "Tugas Akhir" column if it exists
             if "Tugas Akhir" in pivot_df.columns:
                 pivot_df.drop(columns=["Tugas Akhir"], inplace=True)
 
-            # Fill NaN values with 0
             pivot_df.fillna(0, inplace=True)
 
-            # Normalize the data for clustering (excluding 'npm_mahasiswa')
             scaler = MinMaxScaler()
-            numeric_columns = pivot_df.columns[1:]  # Exclude 'npm_mahasiswa'
+            numeric_columns = pivot_df.columns[1:]
             normalized_data = pivot_df.copy()
             normalized_data[numeric_columns] = scaler.fit_transform(pivot_df[numeric_columns])
 
-            # Apply KMeans clustering
             kmeans = load_model()
             normalized_data['cluster'] = kmeans.fit_predict(normalized_data[numeric_columns])
             pivot_df['cluster'] = normalized_data['cluster']
 
-            # Cache the cluster and rata-rata for all students
             for _, row in pivot_df.iterrows():
                 rata_rata = {col: row[col] for col in numeric_columns}
                 cluster_cache[row['npm_mahasiswa']] = {
                     "cluster": int(row['cluster']),
-                    "rata_rata": rata_rata
+                    "rata_rata": rata_rata,
                 }
 
-            # Save the updated cache to a file
             save_cache(cluster_cache)
 
-            # Get the cluster and rata-rata for the specific student
             if npm_mahasiswa not in cluster_cache:
                 return jsonify({"status": "error", "message": "Student not found"}), 404
 
             cluster = cluster_cache[npm_mahasiswa]['cluster']
             rata_rata = cluster_cache[npm_mahasiswa]['rata_rata']
 
-        # Map the cluster to categories
         cluster_mapping = {
-            0: "DKV",  # Cluster 0 is for UMUM
-            1: "PSI",   # Cluster 1 is for PSI
-            2: "Umum"    # Cluster 2 is for DKV
+            0: "DKV",
+            1: "PSI",
+            2: "Umum"
         }
         category = cluster_mapping.get(cluster, "Unknown")
 
-        # Fetch activities from the database based on the student's cluster category
         query_activities = """
         SELECT nama_kegiatan, kategori
         FROM dataset_kegiatanmahasiswa
@@ -218,12 +199,12 @@ def rata_rata_dan_rekomendasi():
                 "message": f"No activities found for category {category}"
             }), 404
 
-        # Convert activities into a list
-        recommended_activities = activities_df['nama_kegiatan'].tolist()
+        recommended_activities = activities_df.to_dict(orient="records")
 
         return jsonify({
             "status": "success",
             "npm_mahasiswa": npm_mahasiswa,
+            "nama_mahasiswa": nama_mahasiswa,
             "cluster": cluster,
             "category": category,
             "rata_rata": rata_rata,
@@ -231,12 +212,7 @@ def rata_rata_dan_rekomendasi():
         })
 
     except Exception as e:
-        return jsonify({
-            "status": "error",
-            "message": str(e)
-        })
-
-
+        return jsonify({"status": "error", "message": str(e)})
 
 
 
