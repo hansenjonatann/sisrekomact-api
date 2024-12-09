@@ -10,7 +10,7 @@ import jwt
 import mysql.connector
 
 app = Flask(__name__)
-CORS(app , supports_credentials=True )
+CORS(app )
 
 # Secret key untuk sesi
 app.config['SECRET_KEY'] = 'sisrekomact-backend-secure-key#2024'
@@ -90,46 +90,50 @@ def login():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+
 # Logout endpoint
 @app.route('/logout', methods=['POST'])
 def logout():
-    session.clear()
-    return jsonify({"status": "success", "message": "Logout successful"})
+        session.clear()
+        return jsonify({"status": "success", "message": "Logout successful"})
+    
 
-# Protected rekomendasi endpoint
+
+
 @app.route('/rekomendasi', methods=['GET'])
-def rata_rata_dan_rekomendasi():
+def rekomendasi():
     try:
-        # Get the token from the request header
+        # Mendapatkan token dari header Authorization
         token = request.headers.get('Authorization')
 
-        print(f"Token from request: {token}")
-
-        # If no token is provided, return an error
         if not token:
             return jsonify({"status": "error", "message": "Token is missing"}), 401
 
-        # Check the token format (bearer token)
+        # Memastikan format token adalah Bearer Token
         if token.startswith('Bearer '):
-            token = token[7:]  # Remove the 'Bearer ' prefix
+            token = token[7:]
 
-        # Decode the JWT token (assuming you have a secret key for JWT)
+        # Decode token JWT
         try:
             decoded_token = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
-            npm_mahasiswa = decoded_token['npm_mahasiswa']
-            nama_mahasiswa = decoded_token['nama_mahasiswa']
+            npm_mahasiswa = decoded_token.get('npm_mahasiswa')
+            nama_mahasiswa = decoded_token.get('nama_mahasiswa')
+
+            # Validasi jika informasi dari token tidak lengkap
+            if not npm_mahasiswa or not nama_mahasiswa:
+                return jsonify({"status": "error", "message": "Invalid token payload"}), 401
+
         except jwt.ExpiredSignatureError:
             return jsonify({"status": "error", "message": "Token has expired"}), 401
         except jwt.InvalidTokenError:
             return jsonify({"status": "error", "message": "Invalid token"}), 401
 
-        
-
-        # Check if the cluster and rata-rata are already cached
+        # Mengecek cache untuk cluster dan rata-rata
         if npm_mahasiswa in cluster_cache:
             cluster = cluster_cache[npm_mahasiswa]['cluster']
             rata_rata = cluster_cache[npm_mahasiswa]['rata_rata']
         else:
+            # Query untuk mendapatkan data mahasiswa
             query = """
             SELECT 
                 npm_mahasiswa,
@@ -138,7 +142,11 @@ def rata_rata_dan_rekomendasi():
             FROM dataset_krs
             GROUP BY npm_mahasiswa, kategori_matakuliah
             """
-            df = pd.read_sql(query, db_connection)
+            try:
+                df = pd.read_sql(query, db_connection)
+            except Exception as db_error:
+                return jsonify({"status": "error", "message": f"Database error: {str(db_error)}"}), 500
+
             df = df.drop_duplicates()
 
             pivot_df = df.pivot(
@@ -147,6 +155,7 @@ def rata_rata_dan_rekomendasi():
                 values="rata_rata_nilai"
             ).reset_index()
 
+            # Menangani kolom duplikat dan missing values
             pivot_df.columns = pivot_df.columns.str.strip()
             pivot_df = pivot_df.loc[:, ~pivot_df.columns.duplicated()]
 
@@ -155,15 +164,22 @@ def rata_rata_dan_rekomendasi():
 
             pivot_df.fillna(0, inplace=True)
 
+            # Normalisasi data
             scaler = MinMaxScaler()
             numeric_columns = pivot_df.columns[1:]
             normalized_data = pivot_df.copy()
             normalized_data[numeric_columns] = scaler.fit_transform(pivot_df[numeric_columns])
 
-            kmeans = load_model()
-            normalized_data['cluster'] = kmeans.fit_predict(normalized_data[numeric_columns])
+            # Prediksi cluster menggunakan model KMeans
+            try:
+                kmeans = load_model()  # Pastikan fungsi load_model() sudah benar
+            except Exception as model_error:
+                return jsonify({"status": "error", "message": f"Model loading error: {str(model_error)}"}), 500
+
+            normalized_data['cluster'] = kmeans.predict(normalized_data[numeric_columns])
             pivot_df['cluster'] = normalized_data['cluster']
 
+            # Menyimpan hasil ke cache
             for _, row in pivot_df.iterrows():
                 rata_rata = {col: row[col] for col in numeric_columns}
                 cluster_cache[row['npm_mahasiswa']] = {
@@ -173,12 +189,14 @@ def rata_rata_dan_rekomendasi():
 
             save_cache(cluster_cache)
 
+            # Validasi jika mahasiswa tidak ditemukan
             if npm_mahasiswa not in cluster_cache:
                 return jsonify({"status": "error", "message": "Student not found"}), 404
 
             cluster = cluster_cache[npm_mahasiswa]['cluster']
             rata_rata = cluster_cache[npm_mahasiswa]['rata_rata']
 
+        # Mapping cluster ke kategori
         cluster_mapping = {
             0: "DKV",
             1: "PSI",
@@ -186,12 +204,23 @@ def rata_rata_dan_rekomendasi():
         }
         category = cluster_mapping.get(cluster, "Unknown")
 
+        # Query untuk mendapatkan kegiatan rekomendasi
         query_activities = """
         SELECT nama_kegiatan, kategori
         FROM dataset_kegiatanmahasiswa
         WHERE kategori = %s LIMIT 12
         """
-        activities_df = pd.read_sql(query_activities, db_connection, params=[category])
+        try:
+            cursor = db_connection.cursor(dictionary=True)
+            cursor.execute(query_activities, (category,))
+            result = cursor.fetchall()
+        except Exception as activity_error:
+            return jsonify({"status": "error", "message": f"Activity query error: {str(activity_error)}"}), 500
+        finally:
+            cursor.close()
+
+        # Konversi hasil ke DataFrame
+        activities_df = pd.DataFrame(result)
 
         if activities_df.empty:
             return jsonify({
@@ -199,8 +228,10 @@ def rata_rata_dan_rekomendasi():
                 "message": f"No activities found for category {category}"
             }), 404
 
+        # Mengubah DataFrame ke list of dictionaries
         recommended_activities = activities_df.to_dict(orient="records")
 
+        # Response berhasil
         return jsonify({
             "status": "success",
             "npm_mahasiswa": npm_mahasiswa,
@@ -209,10 +240,108 @@ def rata_rata_dan_rekomendasi():
             "category": category,
             "rata_rata": rata_rata,
             "recommended_activities": recommended_activities
-        })
+        }), 200
 
     except Exception as e:
-        return jsonify({"status": "error", "message": str(e)})
+        # Menangani error global
+        return jsonify({"status": "error", "message": f"Internal server error: {str(e)}"}), 500
+
+
+
+@app.route('/studentdetail', methods=['GET'])
+def studentDetail():
+    try: 
+        # Mendapatkan token dari header Authorization
+        token = request.headers.get('Authorization')
+
+        if not token:
+            return jsonify({"success": False, "message": "Token is missing"}), 401
+        
+        if token.startswith('Bearer '):
+            token = token[7:]  # Menghapus prefix 'Bearer '
+
+        # Decode token JWT
+        try:
+            decoded_token = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+            npm_mahasiswa = decoded_token.get('npm_mahasiswa')
+            nama_mahasiswa = decoded_token.get('nama_mahasiswa')
+
+            # Validasi jika informasi dari token tidak lengkap
+            if not npm_mahasiswa or not nama_mahasiswa:
+                return jsonify({"success": False, "message": "Invalid token payload"}), 401
+
+        except jwt.ExpiredSignatureError:
+            return jsonify({"status": "error", "message": "Token has expired"}), 401
+        except jwt.InvalidTokenError:
+            return jsonify({"status": "error", "message": "Invalid token"}), 401
+        
+        # Koneksi ke database dan eksekusi query
+        try:
+            query = "SELECT * FROM dataset_mahasiswa WHERE npm_mahasiswa = %s"
+            cursor = db_connection.cursor(dictionary=True)
+            cursor.execute(query, (npm_mahasiswa,))
+            student = cursor.fetchone()
+        except Exception as db_error:
+            return jsonify({"success": False, "message": f"Database error: {str(db_error)}"}), 500
+        finally:
+            cursor.close()  # Pastikan cursor selalu ditutup setelah digunakan
+        
+        # Jika data mahasiswa tidak ditemukan
+        if not student:
+            return jsonify({"success": False, "message": "Student not found"}), 404
+        
+        # Jika berhasil ditemukan
+        return jsonify({
+            "success": True,
+            "message": "Student Detail data",
+            "data": student
+        }), 200
+
+    except Exception as e:
+        # Menangani error global
+        return jsonify({"success": False, "message": f"Internal server error: {str(e)}"}), 500
+
+        
+
+@app.route('/kegiatanmahasiswa' )
+def kegiatanMahasiswa():
+    try:
+        token = request.headers.get('Authorization')
+
+        if not token:
+            return jsonify({"success" : False , "message" : "Login first"})
+        
+        if token.startswith('Bearer '):
+            token = token[7:]  # Remove the 'Bearer ' prefix
+            # Decode the JWT token (assuming you have a secret key for JWT)
+        try:
+            decoded_token = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+            npm_mahasiswa = decoded_token['npm_mahasiswa']
+            nama_mahasiswa = decoded_token['nama_mahasiswa']
+        except jwt.ExpiredSignatureError:
+            return jsonify({"status": "error", "message": "Token has expired"}), 401
+        except jwt.InvalidTokenError:
+            return jsonify({"status": "error", "message": "Invalid token"}), 401
+        
+        query = "SELECT * FROM dataset_kegiatanmahasiswa WHERE npm_mahasiswa = %s"
+        cursor = db_connection.cursor(dictionary=True)
+        cursor.execute(query, (npm_mahasiswa,))
+        kegiatan = cursor.fetchall()
+
+        if not kegiatan:
+            return jsonify({"success" : False , "mesage" : "Kegiatan not found"}) , 404
+        
+        return jsonify({"success" : True  , "message" : "Kegiatan data by student" , "data" : kegiatan}),  200
+    except Exception as e:
+        return jsonify({"success" : False , "message" : str(e)}), 500
+    finally:
+        if db_connection is None:
+            db_connection.close()
+
+
+
+
+
 
 
 
