@@ -206,13 +206,21 @@ def rekomendasi():
 
         # Query untuk mendapatkan kegiatan rekomendasi
         query_activities = """
-        SELECT nama_kegiatan, kategori
+        SELECT DISTINCT nama_kegiatan, kategori
         FROM dataset_kegiatanmahasiswa
-        WHERE kategori = %s LIMIT 12
+        WHERE kategori = %s 
+        AND nama_kegiatan NOT REGEXP '[0-9]{4}'
+        AND nama_kegiatan NOT IN (
+        SELECT nama_kegiatan
+        FROM dataset_kegiatanmahasiswa
+        WHERE npm_mahasiswa = %s
+        )
+        LIMIT 12
+
         """
         try:
             cursor = db_connection.cursor(dictionary=True)
-            cursor.execute(query_activities, (category,))
+            cursor.execute(query_activities, (category, npm_mahasiswa,))
             result = cursor.fetchall()
         except Exception as activity_error:
             return jsonify({"status": "error", "message": f"Activity query error: {str(activity_error)}"}), 500
